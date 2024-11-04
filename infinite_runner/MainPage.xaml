@@ -1,13 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="infinite_runner.MainPage">
+             x:Class="infinite_runner.MainPage"
+             Shell.NavBarIsVisible="False">
 
-<Grid>
-    <Image Source="fundo.png"/>
-    <Image Source="fundo1.png"/>
-    <Image Source="fundo2.png"/>
-    <Image Source="fundo3.png"/>
-    <Image Source="chao.png"/>
-</Grid>
+    <Grid>
+        <Image Source="fundo.png"
+               Aspect="AspectFill"
+               VerticalOptions="Fill"
+               HorizontalOptions="Fill"/>
+
+        <HorizontalStackLayout x:Name="HSLayer1">
+            <Image Source="fundo_opaco.png"
+                   Aspect="AspectFill"
+                   VerticalOptions="Fill"/>
+                   <Image Source="fundo_opaco.png"
+                   Aspect="AspectFill"
+                   VerticalOptions="Fill"/>
+                   <Image Source="fundo_opaco.png"
+                   Aspect="AspectFill"
+                   VerticalOptions="Fill"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout x:Name="HSLayer2">
+            <Image Source="fundo2.png"
+                   Aspect="AspectFill"
+                   VerticalOptions="Fill"/>
+                   <Image Source="fundo2.png"
+                   Aspect="AspectFill"
+                   VerticalOptions="Fill"/>
+                   <Image Source="fundo2.png"
+                   Aspect="AspectFill"
+                   VerticalOptions="Fill"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout x:Name="HSLayer3">
+            <Image Source="fundoo.png"
+                   Aspect="AspectFill"
+                   VerticalOptions="Fill"/>
+                   <Image Source ="fundoo.png"
+                    Aspect="AspectFill"
+                   VerticalOptions="Fill"/>
+                   <Image Source ="fundoo.png"
+                    Aspect="AspectFill"
+                   VerticalOptions="Fill"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout x:Name="HSLayerchao">
+            <Image Source="chao.png"
+                   Aspect="AspectFill"
+                   VerticalOptions="Fill"/>
+        </HorizontalStackLayout>
+    </Grid>
+
 </ContentPage>
