@@ -7,17 +7,16 @@
     <Grid>
         <Image Source="fundo.png"
                Aspect="AspectFill"
-               VerticalOptions="Fill"
-               HorizontalOptions="Fill"/>
+               VerticalOptions="Fill"/>
 
         <HorizontalStackLayout x:Name="HSLayer1">
             <Image Source="fundo_opaco.png"
                    Aspect="AspectFill"
                    VerticalOptions="Fill"/>
-                   <Image Source="fundo_opaco.png"
+            <Image Source="fundo_opaco.png"
                    Aspect="AspectFill"
                    VerticalOptions="Fill"/>
-                   <Image Source="fundo_opaco.png"
+            <Image Source="fundo_opaco.png"
                    Aspect="AspectFill"
                    VerticalOptions="Fill"/>
         </HorizontalStackLayout>
