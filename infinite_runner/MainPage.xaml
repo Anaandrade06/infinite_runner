@@ -4,52 +4,67 @@
              x:Class="infinite_runner.MainPage"
              Shell.NavBarIsVisible="False">
 
-    <Grid>
-        <Image Source="fundo.png"
-               Aspect="AspectFill"
-               VerticalOptions="Fill"/>
+       <Grid>
+              <Image Source="fundo.png"
+                     Aspect="AspectFill"
+                     VerticalOptions="Fill"/>
 
-        <HorizontalStackLayout x:Name="HSLayer1">
-            <Image Source="fundo_opaco.png"
-                   Aspect="AspectFill"
-                   VerticalOptions="Fill"/>
-            <Image Source="fundo_opaco.png"
-                   Aspect="AspectFill"
-                   VerticalOptions="Fill"/>
-            <Image Source="fundo_opaco.png"
-                   Aspect="AspectFill"
-                   VerticalOptions="Fill"/>
-        </HorizontalStackLayout>
+              <HorizontalStackLayout x:Name="HSLayer1">
+                     <Image Source="fundo_opaco.png"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+                     <Image Source="fundo_opaco.png"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+                     <Image Source="fundo_opaco.png"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+              </HorizontalStackLayout>
 
-        <HorizontalStackLayout x:Name="HSLayer2">
-            <Image Source="fundo2.png"
-                   Aspect="AspectFill"
-                   VerticalOptions="Fill"/>
-                   <Image Source="fundo2.png"
-                   Aspect="AspectFill"
-                   VerticalOptions="Fill"/>
-                   <Image Source="fundo2.png"
-                   Aspect="AspectFill"
-                   VerticalOptions="Fill"/>
-        </HorizontalStackLayout>
+              <HorizontalStackLayout x:Name="HSLayer2">
+                     <Image Source="fundo2.png"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+                     <Image Source="fundo2.png"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+                     <Image Source="fundo2.png"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+              </HorizontalStackLayout>
 
-        <HorizontalStackLayout x:Name="HSLayer3">
-            <Image Source="fundoo.png"
-                   Aspect="AspectFill"
-                   VerticalOptions="Fill"/>
-                   <Image Source ="fundoo.png"
-                    Aspect="AspectFill"
-                   VerticalOptions="Fill"/>
-                   <Image Source ="fundoo.png"
-                    Aspect="AspectFill"
-                   VerticalOptions="Fill"/>
-        </HorizontalStackLayout>
+              <HorizontalStackLayout x:Name="HSLayer3">
+                     <Image Source="fundoo.png"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+                     <Image Source="fundoo.png"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+                     <Image Source="fundoo.png"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+              </HorizontalStackLayout>
 
-        <HorizontalStackLayout x:Name="HSLayerchao">
-            <Image Source="chao.png"
-                   Aspect="AspectFill"
-                   VerticalOptions="Fill"/>
-        </HorizontalStackLayout>
-    </Grid>
+              <HorizontalStackLayout x:Name="HSLayerchao">
+                     <Image Source="chao.png"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+                     <Image Source="chao.png"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+                     <Image Source="chao.png"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+              </HorizontalStackLayout>
+              
+              <Image Source="andando.png"
+                     x:Name="jogador"
+                     VerticalOptions="End"
+                     Margin="0,0,25,75"
+                     HeightRequest="180"
+                     WidthRequest="180"
+                     HorizontalOptions="Start"
+                     Aspect="Fill"/>
+       </Grid>
 
 </ContentPage>

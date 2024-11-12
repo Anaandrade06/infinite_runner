@@ -4,43 +4,45 @@ public class Animacao
     protected List<String> Animacao02 = new List<String>();
     protected List<String> Animacao03 = new List<String>();
     public bool Loop = true;
-    protected int AnimacaoTadalla = 1;
+    protected int AnimacaoAtiva = 1;
     bool Brush = true;
     int MainFrame = 1;
     protected Image compImagem;
+        private bool  Stopped = true;
+
     public Animacao(Image imagem)
     {
         compImagem = imagem;
     }
     public void Stop()
     {
-        Brush = true;
+         Stopped = true;
     }
     public void Play()
     {
-        Brush = false;
+         Stopped = false;
     }
-    public void SetAnimationTadalla(int A)
+    public void SetAnimacaoAtiva(int A)
     {
-        AnimacaoTadalla = A;
+        AnimacaoAtiva = A;
     }
-    public void Drawn()
+    public void Desenha()
     {
         if (Brush)
             return;
         string NomeArquivo = "";
         int AnimationHeigth = 0;
-        if (AnimacaoTadalla == 1)
+        if (AnimacaoAtiva == 1)
         {
             NomeArquivo = Animacao01[MainFrame];
             AnimationHeigth = Animacao01.Count;
         }
-        else if (AnimacaoTadalla == 2)
+        else if (AnimacaoAtiva == 2)
         {
             NomeArquivo = Animacao02[MainFrame];
             AnimationHeigth = Animacao02.Count;
         }
-        else if (AnimacaoTadalla == 3)
+        else if (AnimacaoAtiva == 3)
         {
             NomeArquivo = Animacao03[MainFrame];
             AnimationHeigth = Animacao03.Count;
@@ -53,7 +55,7 @@ public class Animacao
                 MainFrame = 0;
             else
             {
-                Brush = true;
+                 Stopped = true;
                 OnStop();
             }
         }
