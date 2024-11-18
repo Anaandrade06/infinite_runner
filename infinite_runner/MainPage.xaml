@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="infinite_runner.MainPage"
+              xmlns:ff="clr-namespace:FFImageLoading.Maui;assembly=FFImageLoading.Maui"
              Shell.NavBarIsVisible="False">
 
        <Grid>
@@ -22,13 +23,13 @@
               </HorizontalStackLayout>
 
               <HorizontalStackLayout x:Name="HSLayer2">
-                     <Image Source="fundo2.png"
+                     <Image Source="fundo.png"
                             Aspect="AspectFill"
                             VerticalOptions="Fill"/>
-                     <Image Source="fundo2.png"
+                     <Image Source="fundo.png"
                             Aspect="AspectFill"
                             VerticalOptions="Fill"/>
-                     <Image Source="fundo2.png"
+                     <Image Source="fundo.png"
                             Aspect="AspectFill"
                             VerticalOptions="Fill"/>
               </HorizontalStackLayout>
@@ -60,11 +61,11 @@
               <Image Source="andando.png"
                      x:Name="jogador"
                      VerticalOptions="End"
-                     Margin="0,0,25,75"
-                     HeightRequest="180"
-                     WidthRequest="180"
+                     Margin="0,0,0,165"
+                     HeightRequest="150"
+                     WidthRequest="300"
                      HorizontalOptions="Start"
-                     Aspect="Fill"/>
+              />
        </Grid>
 
 </ContentPage>

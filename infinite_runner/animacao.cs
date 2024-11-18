@@ -1,3 +1,7 @@
+using FFImageLoading.Maui;
+
+namespace infinite_runner
+{
 public class Animacao
 {
     protected List<String> Animacao01 = new List<String>();
@@ -10,7 +14,7 @@ public class Animacao
     protected Image compImagem;
         private bool  Stopped = true;
 
-    public Animacao(Image imagem)
+    public Animacao(CachedImageView imagem)
     {
         compImagem = imagem;
     }
@@ -64,4 +68,5 @@ public class Animacao
     {
 
     }
+}
 }

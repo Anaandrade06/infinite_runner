@@ -3,8 +3,16 @@ namespace infinite_runner;
 public partial class MainPage : ContentPage
 {
 	bool estaMorto = false;
+	bool estaNoChao = false;
+	bool estaNoAr = false;
 	bool estaPulando = false;
+	int tempoPulando = 0;
+	int tempoNoAr = 0;
+	const int forcaPulo = 8;
+	const int maxTempoPulado = 6;
+	const int maxTempoNoAr = 4;
 	const int tempoEntreFrames = 25;
+	const int forcaGravidade = 6;
 	int Velocidade1 = 0;
 	int Velocidade2 = 0;
 	int Velocidade3 = 0;
@@ -32,9 +40,51 @@ public partial class MainPage : ContentPage
 		while (!estaMorto)
 		{
 			GerenciaCenarios();
+			if (!estaMorto && !estaNoAr)
+			{
+				AplicaGravidade();
+				Player.Desenha();
+			}
+			else
+				AplicaPulo();
+
 			await Task.Delay(tempoEntreFrames);
 		}
 	}
+ void AplicaGravidade()
+ {
+	if (Player.Gety()<0)
+	Player.MoveY(forcaGravidade);
+	else if (Player.GetY(0));
+	{
+		Player.SetY(0);
+		estaNoChao = true;
+	} 
+ }
+ void AplicaPulo()
+ {
+	estaNoChao=false;
+	if(estaPulando&&tempoPulando>= maxTempoPulado)
+	{
+		estaPulando = false;
+		estaNoAr = true;
+		tempoNoAr = 0;
+	}
+	else if (estaNoAr&&tempoNoAr>=maxTempoNoAr)
+	{
+		estaPulando = false;
+		estaNoAr = false;
+		tempoPulando = 0;
+		tempoNoAr = 0;
+	}
+else if (estaPulando&&tempoPulando <maxTempoPulado)
+{
+	Player .MoveY(-forcaPulo);
+	tempoPulando++;
+}
+else if (estaNoAr)
+tempoNoAr++;
+ }
 	void GerenciaCenarios()
 	{
 		MoveCenario();
