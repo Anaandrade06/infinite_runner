@@ -9,22 +9,23 @@ public class Animacao
     protected List<String> Animacao03 = new List<String>();
     public bool Loop = true;
     protected int AnimacaoAtiva = 1;
+    
     bool Brush = true;
     int MainFrame = 1;
-    protected Image compImagem;
-        private bool  Stopped = true;
+    
+    protected CachedImageView ImageView;
 
-    public Animacao(CachedImageView imagem)
+    public Animacao(CachedImageView a)
     {
-        compImagem = imagem;
+        ImageView = a;
     }
     public void Stop()
     {
-         Stopped = true;
+        Brush = true;
     }
     public void Play()
     {
-         Stopped = false;
+         Brush = false;
     }
     public void SetAnimacaoAtiva(int A)
     {
@@ -51,7 +52,7 @@ public class Animacao
             NomeArquivo = Animacao03[MainFrame];
             AnimationHeigth = Animacao03.Count;
         }
-        compImagem.Source = ImageSource.FromFile(NomeArquivo);
+        ImageView.Source = ImageSource.FromFile(NomeArquivo);
         MainFrame++;
         if (MainFrame >= AnimationHeigth)
         {
@@ -59,7 +60,7 @@ public class Animacao
                 MainFrame = 0;
             else
             {
-                 Stopped = true;
+                 Brush = true;
                 OnStop();
             }
         }

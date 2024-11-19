@@ -26,17 +26,17 @@ namespace infinite_runner
             SetAnimacaoAtiva(1);
             Play();
         }
-        public void MoveY(int s)
+        public void MoveY(int S)
         {
-            CachedImage.View.TranslationY += s;
+            ImageView.TranslationY+=S;
         }
         public double GetY()
         {
-            return CachedImageView.TranslationY;
+            return ImageView.TranslationY;
         }
-        public void SetY(double a)
+        public void SetY(double A)
         {
-            CachedImageimageView.TranslationY = a;
+            ImageView.TranslationY = A;
         }
 
 

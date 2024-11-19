@@ -19,6 +19,7 @@ public partial class MainPage : ContentPage
 	int Velocidade = 0;
 	int larguraJanela = 0;
 	int alturaJanela = 0;
+	Player player;
 
 	public MainPage()
 	{
@@ -43,7 +44,7 @@ public partial class MainPage : ContentPage
 			if (!estaMorto && !estaNoAr)
 			{
 				AplicaGravidade();
-				Player.Desenha();
+				player.Desenha();
 			}
 			else
 				AplicaPulo();
@@ -53,11 +54,14 @@ public partial class MainPage : ContentPage
 	}
  void AplicaGravidade()
  {
-	if (Player.Gety()<0)
-	Player.MoveY(forcaGravidade);
-	else if (Player.GetY(0));
+	if
+	 (player.GetY()<0)
+		player.MoveY(forcaGravidade);
+	
+	else if 
+	(player.GetY()>= 0);
 	{
-		Player.SetY(0);
+		player.SetY(0);
 		estaNoChao = true;
 	} 
  }
@@ -79,7 +83,7 @@ public partial class MainPage : ContentPage
 	}
 else if (estaPulando&&tempoPulando <maxTempoPulado)
 {
-	Player .MoveY(-forcaPulo);
+	player .MoveY(-forcaPulo);
 	tempoPulando++;
 }
 else if (estaNoAr)
