@@ -15,9 +15,9 @@ public class Animacao
     
     protected CachedImageView ImageView;
 
-    public Animacao(CachedImageView a)
+    public Animacao(CachedImageView imagem)
     {
-        ImageView = a;
+        ImageView = imagem;
     }
     public void Stop()
     {

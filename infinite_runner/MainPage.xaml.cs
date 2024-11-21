@@ -1,4 +1,6 @@
 ﻿
+using FFImageLoading.Maui;
+
 namespace infinite_runner;
 public partial class MainPage : ContentPage
 {
@@ -25,6 +27,7 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
+	protected CachedImageView ImageView;
 	protected override void OnAppearing()
 	{
 		base.OnAppearing();
@@ -41,7 +44,7 @@ public partial class MainPage : ContentPage
 		while (!estaMorto)
 		{
 			GerenciaCenarios();
-			if (!estaMorto && !estaNoAr)
+			if (!estaPulando && !estaNoAr)
 			{
 				AplicaGravidade();
 				player.Desenha();
